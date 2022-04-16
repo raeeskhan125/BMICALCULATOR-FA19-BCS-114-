@@ -1,0 +1,101 @@
+import 'package:flutter/material.dart';
+import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+import 'IconTextfile.dart';
+import 'Containerfile.dart';
+import 'contentfile.dart';
+class InputPage extends StatelessWidget {
+  @override
+  _InputPageState createstate() =>  _InputPageState();
+}
+class _InputPageState extends State<InputPage> {
+  @override
+  Widget bulid(BuildContext context)
+  {
+    return Scaffold(
+      appBar:AppBar(
+        title:Text ('bmi calculator'),
+      ),
+      body:Column(
+          children: <Widget>[
+      Expanded(child: Row(
+          children: <Widget>
+          [
+          Expanded(child:new RepeatContainerCode(
+          colors:Color(0xff1d1e33) ,
+      cardWidget: RepeatTextandICONeWidgetidget(
+        iconData:FontAwesomeIcons.male,
+        label1:'Male ',
+
+      ),
+
+    ),
+
+    ),
+
+    Expanded(
+    child: new RepeatContainerCode(
+    colors:Color(0xff1d1e33) ,
+    cardWidget: RepeatTextandICONeWidgetidget(
+
+    iconData:FontAwesomeIcons.female,
+    label1:'FeMale ',
+    ),
+    ),
+
+    ),
+    ],
+    ),),
+    Expanded(child:  new RepeatContainerCode(
+    colors:Color(0xff1d1e33) ,
+    cardWidget: RepeatTextandICONewidget(
+
+    ),
+    ),
+
+    ),
+
+    Expanded(child:  Row(
+    children: <Widget>
+    [
+    Expanded(child:new RepeatContainerCode(colors:Color(0xff1d1e33),  cardWidget: RepeatTextandICONewidget(
+    ),),
+
+  ),
+
+  Expanded(child:new RepeatContainerCode(colors:Color(0xff1d1e33) , cardWidget: RepeatTextandICONewidget(
+
+    ),
+    ),
+
+
+
+
+
+
+  }
+}
+class  RepeatTextandICONeWidget extends StatelessWidget{
+
+  RepeatTextandICONewidget({@required this.iconData,this.label });
+  final IconData iconData;
+  final String label;
+  @override
+  Widget build(BuildContext context){
+    return Column(
+        mainAxisAlignment: MainAxisAlignment.center,
+        children: <Widget>[
+        Icon(
+        iconData,
+        size: 80.0,
+    ),
+    SizedBox(
+    height:15.0
+    ),
+   Text(
+    label,
+    style: kLabelStyle,
+    )
+    ];
+  }
+}
+
